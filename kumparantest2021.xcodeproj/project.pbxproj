@@ -14,6 +14,8 @@
 		DB9F7EA52C4389920003D670 /* kumparantest2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F7EA42C4389920003D670 /* kumparantest2021Tests.swift */; };
 		DB9F7EAF2C4389920003D670 /* kumparantest2021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F7EAE2C4389920003D670 /* kumparantest2021UITests.swift */; };
 		DB9F7EB12C4389920003D670 /* kumparantest2021UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F7EB02C4389920003D670 /* kumparantest2021UITestsLaunchTests.swift */; };
+		DB9F7EC22C438AC20003D670 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F7EC12C438AC20003D670 /* Post.swift */; };
+		DB9F7EC52C4396CF0003D670 /* PostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F7EC42C4396CF0003D670 /* PostVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		DB9F7EAA2C4389920003D670 /* kumparantest2021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kumparantest2021UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9F7EAE2C4389920003D670 /* kumparantest2021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kumparantest2021UITests.swift; sourceTree = "<group>"; };
 		DB9F7EB02C4389920003D670 /* kumparantest2021UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kumparantest2021UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB9F7EC12C438AC20003D670 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DB9F7EC42C4396CF0003D670 /* PostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,9 @@
 		DB9F7E922C4389910003D670 /* kumparantest2021 */ = {
 			isa = PBXGroup;
 			children = (
+				DB9F7EC32C438F530003D670 /* ViewModel */,
+				DB9F7EBE2C438A100003D670 /* Model */,
+				DB9F7EBD2C438A050003D670 /* Views */,
 				DB9F7E932C4389910003D670 /* kumparantest2021App.swift */,
 				DB9F7E952C4389910003D670 /* ContentView.swift */,
 				DB9F7E972C4389920003D670 /* Assets.xcassets */,
@@ -125,6 +132,29 @@
 				DB9F7EB02C4389920003D670 /* kumparantest2021UITestsLaunchTests.swift */,
 			);
 			path = kumparantest2021UITests;
+			sourceTree = "<group>";
+		};
+		DB9F7EBD2C438A050003D670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB9F7EBE2C438A100003D670 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F7EC12C438AC20003D670 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB9F7EC32C438F530003D670 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB9F7EC42C4396CF0003D670 /* PostVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9F7EC52C4396CF0003D670 /* PostVM.swift in Sources */,
+				DB9F7EC22C438AC20003D670 /* Post.swift in Sources */,
 				DB9F7E962C4389910003D670 /* ContentView.swift in Sources */,
 				DB9F7E942C4389910003D670 /* kumparantest2021App.swift in Sources */,
 			);
@@ -428,8 +460,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,9 +470,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fancode.kumparantest2021;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,8 +494,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +504,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fancode.kumparantest2021;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

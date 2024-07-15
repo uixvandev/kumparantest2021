@@ -8,17 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = PostViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List(viewModel.postsWithUserDetails) { postWithUserDetails in
+                VStack(alignment: .leading) {
+                    Text(postWithUserDetails.title)
+                        .font(.headline)
+                    Text(postWithUserDetails.body)
+                        .font(.subheadline)
+                    Text("User: \(postWithUserDetails.userName)")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                    Text("Company: \(postWithUserDetails.userCompanyName)")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                }
+            }
+            .navigationTitle("Posts")
+            .onAppear {
+                viewModel.fetchPosts()
+            }
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+
